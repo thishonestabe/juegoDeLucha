@@ -12,7 +12,7 @@ class App {
         this.currentComponent = this.components[name];
         //this.updateView();
         if(this.currentComponent) {
-            this.currentComponent.controller(this.currentComponent.model)
+            this.currentComponent.controller.init(this.currentComponent.model)
         }
         this.updateView();
     }

@@ -1,3 +1,6 @@
+import {controllerWellcome} from "../js/controller.js";
+import wellcomeView from "./wellcome.view.js";
+
 let wellcome = {
     name: 'wellcome',
     route: '^#/wellcome$',
@@ -5,20 +8,9 @@ let wellcome = {
         x: "hi"
     },
     view() {
-        return `<div class='welcome-container'>
-
-                    <div class='welcome-left'></div>
-                    <div class='welcome-right'></div>
-
-                    <h1>STREET<br>FIGHTER<br>1999</h1>
-
-                    <a href="#/luchadores">Start</a>
-
-                </div>`
+        return wellcomeView
     },
-    controller(model) {
-        console.log(model);
-    }
+    controller: controllerWellcome
 }
 
 export default wellcome

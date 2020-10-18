@@ -1,4 +1,5 @@
-import controllerLuchadores from "../js/controller.js";
+import {controllerLuchadores} from "../js/controller.js";
+import luchadoresView from "./luchadores.view.js";
 
 let luchadores = {
     name: 'luchadores',
@@ -7,13 +8,10 @@ let luchadores = {
         luchadores: []
     },
     view(model) {
-        return `<h2>Aqui hay ${model.luchadores.length} luchadores</h2>`
+        return luchadoresView(model)
     },
-    controller(model) {
-        const luchadores = controllerLuchadores.getLuchadores();
-        model.luchadores = [...luchadores];
 
-    }
+    controller: controllerLuchadores
 }
 
 export default luchadores

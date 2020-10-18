@@ -1,8 +1,13 @@
 let controllerLuchadores = {
-    getLuchadores() {
+    init(model) {
         const personajes = ["Abraham","Luis"];
-        return personajes
+        model.luchadores = [...personajes];
+    }
+}
+let controllerWellcome = {
+    init(model) {
+        console.log(model)
     }
 }
 
-export default controllerLuchadores
+export {controllerLuchadores, controllerWellcome}
