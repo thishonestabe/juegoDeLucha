@@ -9,6 +9,7 @@ class App {
         }
     }
     showComponent(name) {
+        console.log("components: ", this.components)
         this.currentComponent = this.components[name];
         //this.updateView();
         if(this.currentComponent) {
@@ -27,6 +28,7 @@ class App {
         this.updateView();
     }
     updateView() {
+        console.log("Current COMPONENT: ", this.currentComponent);
         if(this.currentComponent) {
             this.appElement.innerHTML = this.currentComponent.view(this.currentComponent.model, this);
             let elementos = document.getElementsByClassName('addEvento');

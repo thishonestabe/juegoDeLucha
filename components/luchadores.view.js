@@ -8,6 +8,8 @@ let luchadoresView = function(model)  {
         <div class='personajes-p1'>${renderPlayerCharacterArray(model.p1Characters)}</div>
         <hr>
         <div class='personajes-p2'>${renderPlayerCharacterArray(model.p2Characters)}</div>
+        <hr>
+        <div>${renderFightBtn(model.fightBtn)}</div>
     `
 }
 
@@ -37,6 +39,14 @@ function renderPlayerCharacterArray(luchadoresArr) {
 
     return charactersTemplate
 
+}
+
+function renderFightBtn(flag) {
+    if(flag) {
+        return `<a href="#/fight">FIGHT</a>`
+    } else {
+        return ''
+    }
 }
 
 

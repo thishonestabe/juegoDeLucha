@@ -12,10 +12,12 @@ class Router {
         })
     }
     hasChange() {
+
         const {hash} = window.location;
         const route = this.routes.find(route => {
            return hash.match(new RegExp(route.path));
         });
+        console.log("ruta: ",route);
         if(route) {
             this.app.showComponent(route.name);
         }

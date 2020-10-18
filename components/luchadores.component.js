@@ -8,7 +8,8 @@ let luchadores = {
         luchadores: [],
         jugadorActual: 1,
         p1Characters: [],
-        p2Characters: []
+        p2Characters: [],
+        fightBtn: false
     },
     view(model, app) {
         return luchadoresView(model,app)
