@@ -10,6 +10,10 @@ class App {
     }
     showComponent(name) {
         this.currentComponent = this.components[name];
+        //this.updateView();
+        if(this.currentComponent) {
+            this.currentComponent.controller(this.currentComponent.model)
+        }
         this.updateView();
     }
     updateView() {

@@ -2,7 +2,7 @@ let wellcome = {
     name: 'wellcome',
     route: '^#/wellcome$',
     model: {
-
+        x: "hi"
     },
     view() {
         return `<div class='welcome-container'>
@@ -15,6 +15,9 @@ let wellcome = {
                     <a href="#/luchadores">Start</a>
 
                 </div>`
+    },
+    controller(model) {
+        console.log(model);
     }
 }
 
