@@ -1,3 +1,7 @@
+## Link To GitHub Page 
+
+https://thishonestabe.github.io/juegoDeLucha/
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/thishonestabe/juegoDeLucha/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
