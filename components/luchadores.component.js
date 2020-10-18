@@ -6,10 +6,12 @@ let luchadores = {
     route: '^#/luchadores$',
     model: {
         luchadores: [],
-        jugadorActual: 1
+        jugadorActual: 1,
+        p1Characters: [],
+        p2Characters: []
     },
-    view(model) {
-        return luchadoresView(model)
+    view(model, app) {
+        return luchadoresView(model,app)
     },
 
     controller: controllerLuchadores
