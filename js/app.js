@@ -3,8 +3,10 @@ class App {
         this.appElement = document.querySelector(selector);
         this.components = {};
     }
-    addComponent(component) {
-        this.components[component.name] = component;
+    addComponent(...components) {
+        for (const component of components) {
+            this.components[component.name] = component;
+        }
     }
     showComponent(name) {
         this.currentComponent = this.components[name];

@@ -1,15 +1,14 @@
 import App from './js/app.js';
+import Router from "./js/router.js";
+import luchadores from "./components/luchadores.component.js";
+import wellcome from "./components/wellcome.component.js";
+
 
 const app = new App('#app');
+const router = new Router(app);
 
-app.addComponent({
-    name: 'luchadores',
-    model: {
-        luchadores: []
-    },
-    view(model) {
-        return `<h2>Aqui hay ${model.luchadores.length} luchadores</h2>`
-    }
-});
+app.addComponent(wellcome, luchadores);
+router.addRoute(wellcome.name, wellcome.route);
+router.addRoute(luchadores.name, luchadores.route);
 
-app.showComponent('luchadores');
+app.showComponent('wellcome');
