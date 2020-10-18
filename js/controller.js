@@ -1,7 +1,8 @@
+import luchadores from "../models/luchadores.model.js";
 let controllerLuchadores = {
     init(model) {
-        const personajes = ["Ryu","Chun-Li","Ken","Cammy","Guile","Ibuki"];
-        model.luchadores = [...personajes];
+
+        model.luchadores = [...luchadores];
     }
 }
 let controllerWellcome = {

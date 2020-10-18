@@ -9,9 +9,10 @@ let luchadoresView = (model) => {
 
 function renderCharacterArray(luchadoresArr) {
     let charactersTemplate = '';
+
     for (let character of luchadoresArr) {
 
-        charactersTemplate += `<div>${character}</div>`
+        charactersTemplate += `<div>${character.name}</div>`
 
     }
 
