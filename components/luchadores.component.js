@@ -5,7 +5,8 @@ let luchadores = {
     name: 'luchadores',
     route: '^#/luchadores$',
     model: {
-        luchadores: []
+        luchadores: [],
+        jugadorActual: 1
     },
     view(model) {
         return luchadoresView(model)

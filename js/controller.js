@@ -1,6 +1,6 @@
 let controllerLuchadores = {
     init(model) {
-        const personajes = ["Abraham","Luis"];
+        const personajes = ["Ryu","Chun-Li","Ken","Cammy","Guile","Ibuki"];
         model.luchadores = [...personajes];
     }
 }
