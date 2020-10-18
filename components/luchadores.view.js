@@ -4,6 +4,10 @@ let luchadoresView = function(model)  {
         <h1>Player Select</h1>
         <h3>Player's ${model.jugadorActual} turn</h3>
         <div class='personajes-container'>${renderCharacterArray(model.luchadores)}</div>
+        <hr>
+        <div class='personajes-p1'>${renderPlayerCharacterArray(model.p1Characters)}</div>
+        <hr>
+        <div class='personajes-p2'>${renderPlayerCharacterArray(model.p2Characters)}</div>
     `
 }
 
@@ -14,9 +18,20 @@ function renderCharacterArray(luchadoresArr) {
 
     for (let character of luchadoresArr) {
 
-        // charactersTemplate += `<div onclick='this.c["userAction"]("characterSelect",${JSON.stringify(character.name)})'>${character.name}</div>`
-        // charactersTemplate += `<div onclick='${c['userAction']("characterSelect",JSON.stringify(character.name))}'>${character.name}</div>`
         charactersTemplate += `<div class="addEvento" data-metodo="characterSelect" data-info="${character.name}">${character.name}</div>`
+
+    }
+
+    return charactersTemplate
+
+}
+
+function renderPlayerCharacterArray(luchadoresArr) {
+    let charactersTemplate = '';
+
+    for (let character of luchadoresArr) {
+
+        charactersTemplate += `<div>${character}</div>`
 
     }
 

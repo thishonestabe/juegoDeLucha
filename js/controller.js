@@ -6,8 +6,12 @@ const controllerLuchadores = {
         model.jugadorActual = 1;
     },
     characterSelect(data, model) {
+
+        // model.p1Characters.push(data);
+        // data = JSON.parse(data);
         console.log(data,model)
-        model.p1Characters.push(data);
+        model[`p${model.jugadorActual}Characters`].push(data);
+        model.luchadores = [...model.luchadores.filter(character => character.name !== data)]
         model.jugadorActual = (model.jugadorActual % 2 ? 2 : 1);
     }
 }

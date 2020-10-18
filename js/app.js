@@ -34,7 +34,7 @@ class App {
                 for (let elemento of elementos) {
                     // elemento.addEventListener("onclick", this.userAction(elemento.dataset.metodo, elemento.dataset.character))
                     elemento.addEventListener("click", () => {
-                        console.log("hi")
+                        console.log("info: ", elemento.dataset.info);
                         this.userAction(elemento.dataset.metodo, elemento.dataset.info)
                     });
 
