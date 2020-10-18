@@ -5,11 +5,15 @@ let fight = {
     name: 'fight',
     route: '^#/fight$',
     model: {
-        luchadores: [],
+        round: 0,
         jugadorActual: 1,
         p1Characters: [],
+        p1Health: 100,
+        p1Wins: 0,
         p2Characters: [],
-        fightBtn: true
+        p2Health: 100,
+        p2Wins: 0
+
     },
     view(model) {
         return fightView(model)

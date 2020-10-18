@@ -1,4 +1,5 @@
 import luchadores from "../models/luchadores.model.js";
+
 const controllerLuchadores = {
     init(model) {
 
@@ -18,7 +19,7 @@ const controllerLuchadores = {
         }
     }
 }
-let controllerWellcome = {
+const controllerWellcome = {
     init(model) {
         console.log(model)
     }
@@ -26,6 +27,13 @@ let controllerWellcome = {
 
 const controllerFight = {
     init(model) {
+        model.p1Characters = ([...sessionStorage.getItem("p1").split(',')]).map(c => {
+            return luchadores.find(a => a.name === c)
+        });
+
+        model.p2Characters = [...sessionStorage.getItem("p2").split(',')].map(c => {
+            return luchadores.find(a => a.name === c)
+        });
         console.log(model)
     }
 }

@@ -9,7 +9,7 @@ let luchadoresView = function(model)  {
         <hr>
         <div class='personajes-p2'>${renderPlayerCharacterArray(model.p2Characters)}</div>
         <hr>
-        <div>${renderFightBtn(model.fightBtn)}</div>
+        <div>${renderFightBtn(model.fightBtn, model.p1Characters, model.p2Characters)}</div>
     `
 }
 
@@ -41,8 +41,10 @@ function renderPlayerCharacterArray(luchadoresArr) {
 
 }
 
-function renderFightBtn(flag) {
+function renderFightBtn(flag,p1,p2) {
     if(flag) {
+        sessionStorage.setItem("p1", p1);
+        sessionStorage.setItem("p2", p2);
         return `<a href="#/fight">FIGHT</a>`
     } else {
         return ''
