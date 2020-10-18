@@ -12,7 +12,9 @@ let fight = {
         p1Wins: 0,
         p2Characters: [],
         p2Health: 100,
-        p2Wins: 0
+        p2Wins: 0,
+        winner: "none"
+
 
     },
     view(model) {

@@ -45,7 +45,7 @@ function renderFightBtn(flag,p1,p2) {
     if(flag) {
         sessionStorage.setItem("p1", p1);
         sessionStorage.setItem("p2", p2);
-        return `<a href="#/fight">FIGHT</a>`
+        return `<a href="#/fight"><button>FIGHT</button></a>`
     } else {
         return ''
     }

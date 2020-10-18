@@ -27,7 +27,7 @@ let luchadores = [
     {name: 'Ibuki',
         punch: 30,
         kick: 70,
-        special: 100
+        special: 80
     }
 
 ]
