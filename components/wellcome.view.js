@@ -7,9 +7,7 @@ let wellcomeView = `<div class='card'>
                         <a href="#/luchadores" class="btn btn-primary">Start</a>
                     </div>
 
-                    
-
-                    
+                 
 
                    </div>`
 

@@ -47,7 +47,15 @@ function renderFightScreen(model,turno) {
         `
 
     } else {
-        return `<h1>WINNER ${model.winner}</h1>`
+
+        return `
+
+        <h1 style="text-align: center">WINNER ${model.winner}</h1>
+        <div class="fight-container d-flex flex-row bd-highlight justify-content-center" style="margin-top: 20px">
+<!--        <a href="#/wellcome" class="btn btn-primary">Play Again</a>-->
+        </div>
+
+`
     }
 }
 
