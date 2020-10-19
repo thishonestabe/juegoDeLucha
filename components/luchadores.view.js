@@ -1,15 +1,30 @@
 let luchadoresView = function(model)  {
     return `
-        <h2>Aqui hay ${model.luchadores.length} luchadores</h2>
-        <h1>Player Select</h1>
-        <h3>Player's ${model.jugadorActual} turn</h3>
+        <div class="card">
+        <div class="card-header">
+            Player Select
+        </div>
+        <div class="card-body">
+        <div class="card-title"> 
+        Luchadores disponibles ${model.luchadores.length} 
+        <br>
+        Player's ${model.jugadorActual} turn
+        </div>
+        
+  
+
+        
+        
         <div class='personajes-container'>${renderCharacterArray(model.luchadores)}</div>
         <hr>
-        <div class='personajes-p1'>${renderPlayerCharacterArray(model.p1Characters)}</div>
-        <hr>
-        <div class='personajes-p2'>${renderPlayerCharacterArray(model.p2Characters)}</div>
-        <hr>
+       <div class="d-flex flex-row bd-highlight mb-3">
+        <span class='personajes-p1 p-2 bd-highlight'><strong>P1:</strong>${renderPlayerCharacterArray(model.p1Characters)}</span>
+       
+        <span class='personajes-p2 p-2 bd-highlight'><strong>P2:</strong>${renderPlayerCharacterArray(model.p2Characters)}</span>
+        </div>
+        </div>
         <div>${renderFightBtn(model.fightBtn, model.p1Characters, model.p2Characters)}</div>
+        </div>
     `
 }
 
@@ -20,7 +35,7 @@ function renderCharacterArray(luchadoresArr) {
 
     for (let character of luchadoresArr) {
 
-        charactersTemplate += `<div class="addEvento" data-metodo="characterSelect" data-info="${character.name}">${character.name}</div>`
+        charactersTemplate += `<div class="addEvento p-1 bd-highlight border border-primary" data-metodo="characterSelect" data-info="${character.name}">${character.name}</div>`
 
     }
 
@@ -33,7 +48,7 @@ function renderPlayerCharacterArray(luchadoresArr) {
 
     for (let character of luchadoresArr) {
 
-        charactersTemplate += `<div>${character}</div>`
+        charactersTemplate += `<div class="p-1 bd-highlight">${character}</div>`
 
     }
 
@@ -45,7 +60,7 @@ function renderFightBtn(flag,p1,p2) {
     if(flag) {
         sessionStorage.setItem("p1", p1);
         sessionStorage.setItem("p2", p2);
-        return `<a href="#/fight"><button>FIGHT</button></a>`
+        return `<a href="#/fight" class="btn btn-danger">FIGHT</a>`
     } else {
         return ''
     }

@@ -1,11 +1,15 @@
-let wellcomeView = `<div class='welcome-container'>
+let wellcomeView = `<div class='card'>
 
-                    <div class='welcome-left'></div>
-                    <div class='welcome-right'></div>
+                    <div class='card-header'>
+                        Welcome to my game.
+                    </div>
+                    <div class='card-body'>
+                        <a href="#/luchadores" class="btn btn-primary">Start</a>
+                    </div>
 
-                    <h1>STREET<br>FIGHTER<br>1999</h1>
+                    
 
-                    <a href="#/luchadores">Start</a>
+                    
 
                    </div>`
 
